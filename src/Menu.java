@@ -14,6 +14,15 @@ import java.io.PrintWriter;
 
 public class Menu {	
 	
+	private void waitForUser(PrintWriter screen, BufferedReader keyboard){
+		 screen.print("Enter to Continue > "); screen.flush();
+		 try {
+			 keyboard.readLine();
+		 } catch (Exception e) {
+			 screen.println(e);
+		 }
+	}
+	
 	 public void menu(PrintWriter screen, BufferedReader keyboard){
 		 boolean menuloop = true;
 		 do {
@@ -33,16 +42,19 @@ public class Menu {
 		    	 		menuloop = false;
 		    	 		break;
 		    	 	case 1:
-		    	 		hello hw = new hello();
-		    	 		hw.helloWorld();
+		    	 		HelloWorld hw = new HelloWorld();
+		    	 		hw.helloWorld(screen);
+		    	 		waitForUser(screen,keyboard);
 		    	 		break;
 		    	 	case 2:
 		    	 		YourAge ya = new YourAge();
 		    	 		ya.whatIsYourAge(screen, keyboard);
+		    	 		waitForUser(screen,keyboard);
 		    	 		break;
 		    	 	case 3:
 		    	 		ConvertDegree cd = new ConvertDegree();
 		    	 		cd.degreeFtoDegreeC(screen, keyboard);
+		    	 		waitForUser(screen,keyboard);
 		    	 		break;
 		    		 default:
 		    			 screen.println("That's not an option.");

@@ -25,9 +25,6 @@ public class YourAge {
 				 screen.println("\n " + name + " is " + age + " years old.");
 				 exceptionloop = false;
 				 
-				 screen.print("Enter to Continue > "); screen.flush();
-				 keyboard.readLine();
-				 
 			 } catch (Exception e){
 				 screen.println("Sorry somewhere along the line a bad value go inputed try again.");
 				 exceptionloop = true;
