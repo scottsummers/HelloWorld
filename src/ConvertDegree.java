@@ -18,6 +18,7 @@ public class ConvertDegree {
 			 double degreeF = new Double (keyboard.readLine()).doubleValue();
 			 double degreeC = (((5.0/9.0)*degreeF)-(160.0/9.0));
 			 
+			 
 			 screen.println("\n"+ degreeF + " Degrees Fahrenheit equals " + degreeC + " Degrees Celsius");
 		 } catch (Exception e) {
 			 screen.println("Sorry that was invalid.");
